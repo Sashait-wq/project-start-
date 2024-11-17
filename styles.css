@@ -6,25 +6,22 @@
     --text-color-list:purple;
 }
 
-*{
-    /* margin: 0; */
-    /* padding: 0; */
+/* *{
+    margin: 0; 
+    padding: 0; 
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    font-family: Arial, Helvetica, sans-serif; 
+} */
 
 /* intro-section */
 .highlighted-text{
     background-color: var(--background-text);
 }
 
-.first-a{
-    color: #000;
-}
-
 img{
     width: 150px;
     height: 150px;
+    border-radius: 50%;
     object-fit: cover;
 }
 
@@ -47,7 +44,6 @@ img{
 
 .google-link{
     color: var( --text-color-list-link);
-    text-transform: uppercase;
     font-weight: 600;
 }
 
