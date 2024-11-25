@@ -1,54 +1,64 @@
 :root{
-    --background-green:#e2ffde;
-    --background-red:#f7e0e0;
+  --background-main-block:#cdfbfb;
+  --background-nested-block-1:#52dede;
+  --background-nested-block-2:#3cbfe8;
 }
 
 *{
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif; 
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Arial', Helvetica, sans-serif;
 }
 
-caption{
-    font-size: 26px;
-    margin-bottom: 20px;
-    font-weight: 600;
+/* Головний блок */
+.main-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background: var(--background-main-block);
+  border: 1px solid #65c4c4;
+}
+/* Вкладений блок 1-го рівня */
+.nested-block-1{
+  width: fit-content;
+  background: var(--background-nested-block-1) ;
+  border: 1px solid #128787;
+  font-family: "Roboto", sans-serif;
+}
+/*Використання MyCustomFont */
+.custom-font{
+  font-size: 2rem;
+  font-family:"MyCustomFont", sans-serif ;
 }
 
-table {
-    width: 70%;
-    border-collapse: collapse; 
-  }
-
-  th, td {
-    border: 1px solid #ddd; 
-    padding: 8px; 
-    text-align: left;
-    width: 200px;
-  }
-
-  thead th{
-  background: #f8f6f6;
-  }
-
-  td:nth-child(1){
-   font-style: italic;
-  }
-
-  .first-courses {
-    background: var(--background-green);
-  }
-
-  .second-courses{
-    background: var(--background-red);
-  }
-
-  
+/* Вкладений блок 2-го рівня */
+.nested-block-2{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: fit-content;
+  background: var(--background-nested-block-2);
+  border: 1px solid #0987ae;
+  font-family: "MyCustomFontTwo", sans-serif; 
+  letter-spacing: 1px;
+}
+/*Roboto + стилі */
+.custom-size{
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+}
+/* Загальні стилі для всіх блоків */
+.box{
+  padding: 20px;
+  font-size: 26px;
+}

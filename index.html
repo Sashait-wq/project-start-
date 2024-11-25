@@ -4,70 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+     <!-- Підключення Google Fonts для шрифта Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<!-- Підключення додаткового CSS-файлу з локальними шрифтами -->
+<link rel="stylesheet" href="./fonts.css">
     <title>Home Work</title>
 </head>
 <body>
-    <table>
-        <caption>Таблиця страв</caption>
-        <thead>
-          <tr>
-            <th>Група</th>
-            <th>Назва страви</th>
-            <th>Тип кухні</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="first-courses">
-            <td>Перше</td>
-            <td>Борщ</td>
-            <td>Українська</td>
-          </tr>
-          <tr class="first-courses">
-            <td>Перше</td>
-            <td>Рамен</td>
-            <td>Японська</td>
-          </tr>
-          <tr class="second-courses">
-            <td>Друге</td>
-            <td>Плов</td>
-            <td>Узбекська</td>
-          </tr>
-          <tr class="second-courses">
-            <td>Друге</td>
-            <td>Біфштекс</td>
-            <td>Англійська</td>
-          </tr>
-          <tr>
-            <td>Етнічність</td>
-            <td>Тако</td>
-            <td>Мексиканська</td>
-          </tr>
-          <tr>
-            <td>Етнічність</td>
-            <td>Кебаб</td>
-            <td>Турецька</td>
-          </tr>
-          <tr class="first-courses">
-            <td>Перше</td>
-            <td>Крем-суп із грибів</td>
-            <td>Французька</td>
-          </tr>
-          <tr class="second-courses">
-            <td>Друге</td>
-            <td>Рататуй</td>
-            <td>Французька</td>
-          </tr>
-          <tr>
-            <td>Етнічність</td>
-            <td>Суші</td>
-            <td>Японська</td>
-          </tr>
-          <tr class="second-courses">
-            <td>Друге</td>
-            <td>Салат Цезар</td>
-            <td>Американська</td>
-          </tr> 
-        </tbody>
-      </table>
+  <div class="box main-block">
+    Головний блок (Arial)
+    <div class="box nested-block-1">
+        Вкладений блок 1-го рівня (Roboto)
+        <p class="custom-font">Вкладений блок 1-го рівня та 2-й рівень - (MyCustomFont) тут розмір буде 32, але відносий розмір</p>
+        <div class="box nested-block-2">
+            Вкладений блок 2-го 
+            <br>
+            рівня (Open Sans)
+            <p class="custom-size">Вкладений блок 2-го рівня та 2-й рівень - (Roboto) 
+                <br>
+                тут розмір буде 22, але відносий розмір</p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
