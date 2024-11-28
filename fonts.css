@@ -1,19 +1,9 @@
 @font-face {
-    font-family: 'MyCustomFont'; 
+    font-family:'MyCustomFont'; 
     src: url('./fonts/Roboto-Italic.woff2') format('woff2'),
          url('./fonts/Roboto-Italic.woff') format('woff'),
          url('./fonts/Roboto-Italic.ttf') format('truetype');
     font-style: italic; 
     font-weight: normal; 
     font-display: swap;
-}
-
-@font-face {
-    font-family: 'MyCustomFontTwo';
-    src: url('./fonts/OpenSans_Condensed-Medium.woff2') format('woff2'),
-         url('./fonts/OpenSans_Condensed-Medium.woff') format('woff'),
-         url('./fonts/OpenSans_Condensed-Medium.ttf') format('truetype');
-         font-style: italic; 
-         font-weight: normal; 
-         font-display: swap;
 }

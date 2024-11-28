@@ -1,64 +1,114 @@
 :root{
-  --background-main-block:#cdfbfb;
-  --background-nested-block-1:#52dede;
-  --background-nested-block-2:#3cbfe8;
+ --text-color: #fff;
+ --background-button:rgb(0 0 0 / 60%);
+ --background-center:rgb(145 143 143 / 60%);
 }
 
 *{
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-family: 'Arial', Helvetica, sans-serif;
+ font-family: "MyCustomFont", Helvetica, sans-serif;
 }
 
-/* Головний блок */
-.main-block{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+/*Загальні стилі для всіх блоків*/
+.hero-section{
   width: 100%;
-  background: var(--background-main-block);
-  border: 1px solid #65c4c4;
-}
-/* Вкладений блок 1-го рівня */
-.nested-block-1{
-  width: fit-content;
-  background: var(--background-nested-block-1) ;
-  border: 1px solid #128787;
-  font-family: "Roboto", sans-serif;
-}
-/*Використання MyCustomFont */
-.custom-font{
-  font-size: 2rem;
-  font-family:"MyCustomFont", sans-serif ;
-}
-
-/* Вкладений блок 2-го рівня */
-.nested-block-2{
+  height: 100vh;
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.box-1{
+  background-image: url("./image.jpg/Ichigo\ Kurosak.jpg");
+}
+.box-2{
+  background-image: url("./image.jpg/itachi\ uchiha.jpg");
+}
+.box-3{
+  background-image: url("./image.jpg/OnePunchMan.jpg");
+}
+.box-4{
+  background-image: url("./image.jpg/Pikachu.jpg");
+}
+.box-5{
+  background-image: url("./image.jpg/Alphonse.jpg");
+}
+.box-6{
+  background-image: url("./image.jpg/SatoruGojo.jpg");
+}
+
+.info-hero{
+  position: relative;
   width: fit-content;
-  background: var(--background-nested-block-2);
-  border: 1px solid #0987ae;
-  font-family: "MyCustomFontTwo", sans-serif; 
+  overflow: hidden;
+  padding: 30px;
+  height: 200px;
+  border-radius: 8px;
   letter-spacing: 1px;
+  color: var(--text-color);
+  background: var(--background-center);
+  backdrop-filter: blur(3px);
 }
-/*Roboto + стилі */
-.custom-size{
+
+/*Загальні стилі h2*/
+.info-hero h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Загальні стилі p*/
+.info-hero p{
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/*Розташування кнопок*/
+.button {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  gap: 10px;
+  transform: translateX(-50%);
+}
+
+/*Стилізація кнопок*/
+.btn{
+padding: 15px;
+width: 150px;
+font-size: 18px;
+font-weight: 600;
+border-radius: 8px;
+letter-spacing: 1px;
+border: none;
+cursor: pointer;
+color: var(--text-color);
+background: var(--background-button);
+}
+
+/*Стилізація кнопки - скрол*/
+.scroll{
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  padding: 5px 10px;
+  font-size: 20px;
+  line-height: 50px;
   letter-spacing: 1px;
-  font-size: 1.4rem;
-  font-family: "Roboto", sans-serif;
-}
-/* Загальні стилі для всіх блоків */
-.box{
-  padding: 20px;
-  font-size: 26px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--text-color);
+  background: var(--background-button);
 }
