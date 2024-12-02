@@ -1,114 +1,112 @@
-:root{
- --text-color: #fff;
- --background-button:rgb(0 0 0 / 60%);
- --background-center:rgb(145 143 143 / 60%);
+:root {
+  --background-before: red;
+  --background-before-child: rgb(12, 182, 194);
+  --text-color: #fff;
+  --text-color-child: #000;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body {
+  font-family: "MyCastomFontTwo", Helvetica, sans-serif;
 }
 
-body{
- font-family: "MyCustomFont", Helvetica, sans-serif;
-}
-
-/*Загальні стилі для всіх блоків*/
-.hero-section{
-  width: 100%;
-  height: 100vh;
+/* Центрування + лічильник з 0 */
+.main-block {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  flex-direction: column;
+  height: 100vh;
+  counter-reset: counter-title;
 }
 
-.box-1{
-  background-image: url("./image.jpg/Ichigo\ Kurosak.jpg");
-}
-.box-2{
-  background-image: url("./image.jpg/itachi\ uchiha.jpg");
-}
-.box-3{
-  background-image: url("./image.jpg/OnePunchMan.jpg");
-}
-.box-4{
-  background-image: url("./image.jpg/Pikachu.jpg");
-}
-.box-5{
-  background-image: url("./image.jpg/Alphonse.jpg");
-}
-.box-6{
-  background-image: url("./image.jpg/SatoruGojo.jpg");
-}
-
-.info-hero{
-  position: relative;
-  width: fit-content;
-  overflow: hidden;
-  padding: 30px;
-  height: 200px;
-  border-radius: 8px;
+/* Збільшуємо лічильник на 1 */
+.counter-title {
+  counter-increment: counter-title;
   letter-spacing: 1px;
-  color: var(--text-color);
-  background: var(--background-center);
-  backdrop-filter: blur(3px);
 }
 
-/*Загальні стилі h2*/
-.info-hero h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
+/* Виводимо значення */
+.counter-title::before {
+  content: "Секція " counter(counter-title) ": ";
+  color: #9E9E9E;
+  font-size: 23px;
+}
+
+/* Починаємо лічильник з 0 */
+ul {
+  counter-reset: list-counter;
+  list-style: none;
+}
+
+/* Збільшуємо лічильник на 1 */
+ul li {
+  counter-increment: list-counter;
+  margin-bottom: 5px;
+}
+
+/* Виводимо значення для першого списку*/
+.first-list-counter li::before {
+  content: "1." counter(list-counter);
+  margin-right: 10px;
+}
+
+/* Виводимо значення для другого списку*/
+.center-list-counter li::before {
+  content: "2." counter(list-counter);
+  margin-right: 10px;
+}
+
+/* Лічільник для вкладеного списку */
+ .nested-list-counter {
+  counter-reset: sub-counter;
+}
+
+/* Збільшуємо лічильник на 1 */
+.nested-list-counter li {
+  counter-increment: sub-counter;
+}
+
+/*Виводимо значення, Декоративна фігура для вкладеного список*/
+.nested-list-counter li::before {
+  content: counter(list-counter) "." counter(sub-counter);
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  margin-right: 10px;
   text-align: center;
-  text-transform: uppercase;
+  display: inline-block;
+  color: var(--text-color-child);
+  background-color: var(--background-before-child);
+}
+ 
+/* Виводимо значення для останнього лічільника*/
+.last-list-counter li::before {
+  content: "3." counter(list-counter);
+  margin-right: 10px;
 }
 
-/* Загальні стилі p*/
-.info-hero p{
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-
-/*Розташування кнопок*/
-.button {
-  display: flex;
-  position: absolute;
-  left: 50%;
-  gap: 10px;
-  transform: translateX(-50%);
-}
-
-/*Стилізація кнопок*/
-.btn{
-padding: 15px;
-width: 150px;
-font-size: 18px;
-font-weight: 600;
-border-radius: 8px;
-letter-spacing: 1px;
-border: none;
-cursor: pointer;
-color: var(--text-color);
-background: var(--background-button);
-}
-
-/*Стилізація кнопки - скрол*/
-.scroll{
-  position: fixed;
-  right: 50px;
-  bottom: 50px;
-  padding: 5px 10px;
-  font-size: 20px;
-  line-height: 50px;
-  letter-spacing: 1px;
-  border-radius: 8px;
-  cursor: pointer;
+/*background Для всіх*/
+.counter> li::before {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 11px;
+  border-radius: 50%;
   text-align: center;
-  text-transform: uppercase;
+  display: inline-block;
   color: var(--text-color);
-  background: var(--background-button);
+  background-color: var(--background-before);
 }
+
+/* Декоративна фігура для всіх*/
+.counter >li::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  line-height: 20px;
+  margin-left: 10px;
+  border: 1px solid;
+  display: inline-block;
+  background-color: var(--background-before-child);
+}
+
