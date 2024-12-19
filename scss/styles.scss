@@ -1,0 +1,615 @@
+:root{
+    --color-bg-tite: #B9FF66;
+    --color-bg-card-w: #F3F3F3;
+    --color-bg-card-dark:#191A23;
+    --hover-link: #9bf72e;
+ }
+ 
+ 
+ // Основні змінні для кольорів
+ $color-bg-tite: var(--color-bg-tite);
+ $text-color: var(--bs-black);
+ $color-bg-card-w: var(--color-bg-card-w);
+ $color-bg-card-dark: var(--color-bg-card-dark);
+ $text-color-w: var(--bs-white);
+ $hover-link: var( --hover-link);
+ 
+ // Базові стилі для сторінки
+ html,
+ body {
+     font-family: "Space Grotesk", Helvetica, sans-serif;
+ }
+ 
+ // Відступи для всіх секцій сайту
+ header,
+ section,
+ footer {
+     padding-top: 6.25rem;
+ }
+ 
+ // Стилі для всіх заголовків і текстових елементів
+ p,
+ h1,
+ h2,
+ h3,
+ h4 {
+     margin: 0;
+     
+ }
+ 
+ // загальні стилі, size
+ p {
+     font-size: 1.12em;
+     line-height: 1.2;
+     letter-spacing: 1px;
+ }
+ 
+ h2 {
+     font-size: 2.5em;
+ }
+ 
+ a {
+     font-size: 1.25em;
+     text-decoration: none;
+     color: $text-color;
+ }
+ 
+ 
+ h3 {
+     font-size: 1.87em;
+ }
+ 
+ 
+ h4 {
+     font-size: 1.25em;
+ }
+ 
+ // стилі для кнопок 
+ .btn {
+     font-size: 1.25em;
+     padding: 1.25rem 2.2rem;
+     border-radius: 14px;
+     transition: all .1s ease;
+     color: $text-color-w;
+     letter-spacing: 1px;
+ }
+ 
+ //  ------- стилі для Header-------  
+ 
+ .navigation-head{
+     
+     .navbar{
+         display: flex;
+         justify-content: flex-end;
+ 
+         .btn-outline-secondary{
+             border: 1px solid !important;
+             color: $text-color !important;
+         
+             &:hover{
+                 background: $color-bg-tite;
+             }
+         }
+     }
+ }
+ 
+ .head-info{
+  max-width: 535px;
+  width: 100%;
+ 
+     h1{
+         font-size: 3.75em;
+     }
+ 
+     p{
+         padding: 2.2rem 0;
+         line-height: 1.5;
+         max-width: 498px;
+         width: 100%;
+         font-size: 1.25em;
+     }
+ }
+ 
+ .img-head{
+     filter: grayscale(100%);
+ }
+ 
+ // ------- Секція services -------
+ 
+ // Контейнер для карток сервісів
+ .card-services {
+     display: flex;
+     overflow: hidden;
+     justify-content: space-between;
+     padding: 3.1rem;
+     height: 310px;
+     border-radius: 45px;
+     margin-bottom: 24px;
+ 
+     // Стилі для заголовків картки
+     .title-services {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+ 
+         h3 {
+             border-radius: 7px;
+             padding: 0 7px 0 7px;
+             width: fit-content;
+         }
+ 
+     }
+ }
+ 
+ // Стилі для іконки-стрілки
+ .btn-more {
+ 
+     .img-arrow {
+         width: 41px;
+         height: 41px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 50%;
+         background: $color-bg-card-dark;
+     }
+ }
+ 
+ // Стилі для зображення у картці
+ .Illustration {
+     max-width: 210px;
+ }
+ 
+ // Разні кольори блоків  
+ .card-bg-grey {
+     background: $color-bg-card-w;
+ 
+     h3 {
+         background: $color-bg-tite;
+     }
+ }
+ 
+ .card-bg-green {
+     background: $color-bg-tite;
+ 
+     h3 {
+         background: $color-bg-card-w;
+     }
+ }
+ 
+ .card-bg-dark {
+     background: $color-bg-card-dark;
+ 
+     h3 {
+         background: $color-bg-card-w;
+     }
+ 
+     a {
+         color: $text-color-w;
+     }
+ 
+     .img-arrow {
+         background: $color-bg-card-w;
+     }
+ }
+ 
+ // ------- Секція happen -------
+
+ // Контейнер для секції
+ .card-happen {
+     border-radius: 45px;
+     background: $color-bg-card-w;
+     display: flex;
+     justify-content: space-between;
+     padding: 0 3.75rem;
+ 
+     // Ліва частина секції (текстовий контент)
+     .make-happen-frame {
+         max-width: 500px;
+         overflow: hidden;
+ 
+         p {
+             margin: 26px 0;
+         }
+     }
+ }
+ 
+ 
+ // ------- Секція case studies -------
+ 
+ // Контейнер для кейсів
+ .cases-studies {
+     overflow: hidden;
+     padding: 4.37rem 3.75rem;
+     border-radius: 45px;
+     background: $color-bg-card-dark;
+ 
+     // Стилі для кейсу
+     .case-study {
+         max-width: 286px;
+ 
+         /* стилі для параграфу */
+         p {
+             color: $text-color-w;
+             margin-bottom: 20px;
+         }
+ 
+         .btn-more {
+ 
+             /* Стилі для посилань у секції кейсів */
+             a {
+                 color: $color-bg-tite;
+ 
+                 &:hover {
+                     color: $hover-link;
+                 }
+             }
+         }
+     }
+ 
+ }
+ 
+ // Вертикальна лінія між кейсами
+ .vertical-line {
+     height: 186px;
+     width: 1px;
+     background: $text-color-w;
+ }
+ 
+ 
+ // ------- short-p -------
+ .label-title {
+ 
+     .short-p {
+         max-width: 300px;
+     }
+ }
+ 
+ // ------- Секція accordion -------
+ 
+ .accordion{
+     --bs-accordion-border-color: none;
+     --bs-accordion-btn-focus-box-shadow: none;
+ }
+ 
+ .accordion-item {
+     margin-bottom: 25px;
+     border-radius: 45px !important;
+     overflow: hidden;
+ 
+ 
+     .accord{
+         &::after{
+             content: "+";
+             width: 60px;
+             height: 60px;
+             font-size: 2.5rem;
+             font-weight: 600;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             border: 1px solid;
+             border-radius: 50%;
+             background-image: none;
+         }
+ 
+         &:not(.collapsed){
+             &::after{
+                 content: "-";
+                 background: $text-color-w;
+             }
+         }
+     }
+ 
+     .accordion-body{
+         background: $color-bg-tite;
+         padding: 40px 60px;
+         font-size: 1.12em ;
+        }
+ }
+ 
+ .accord {
+     padding: 2.5rem 3.75rem;
+     font-size: 1.87rem;
+     gap: 20px;
+ 
+     span {
+         font-size: 3.4rem;
+     }
+ }
+ 
+ .accord:not(.collapsed) {
+ background: $color-bg-tite;
+ color: #000;
+ border-bottom: 1px solid;
+ }
+ 
+ //  ------- Секція card team -------
+ 
+ // Контейнер для карток команди
+ .cards-team {
+     height: 331px;
+     border-radius: 45px;
+     margin-bottom: 40px;
+     padding: 2.5rem 2.2rem;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+     gap:20px;
+ 
+     // Контейнер для зображення
+     .picture {
+         display: flex;
+         align-items: flex-end;
+         position: relative;
+         gap: 15px;
+ 
+         &::after {
+             content: "";
+             position: absolute;
+             background-image: url("./image/team.png/Social.png");
+             width: 34px;
+             height: 34px;
+             top: 0;
+             right: 0;
+             cursor: pointer;
+         }
+     }
+ }
+ 
+ .hr{
+     width: 100%;
+     height: 1px;
+     background: #000;
+ }
+ 
+ 
+ //  ------- Секція Testimonials -------
+ 
+ /* Головний блок де контент */
+ .testimonial-block{
+     height: 625px;
+     padding: 4.37rem 0 ;
+     background: $color-bg-card-dark;
+     border-radius: 45px;
+     overflow: hidden;
+     position: relative;
+ 
+      /* стилі для дочірніх блоків */
+     .bubble{
+     color: $text-color-w;
+     border-radius: 45px;
+     padding: 3.1rem 3.1rem;
+     border: 1px solid #B9FF66;
+     width: 606px;
+      }
+ 
+   }
+ 
+ // розташування блоків  
+   .text-1{
+     position: absolute;
+     left: -346px;
+   }
+   
+   .text-2{
+   position: absolute;
+   left: 310px;
+   }
+   
+   .text-3{
+     position: absolute;
+     left: 966px;
+   }
+   
+   /* основні стилі для блоку h4 */
+   .block-Corp {
+     max-width: 526px;
+     color: $text-color-w;
+     padding-left: 5rem;
+ 
+        /* щоб перший h4 був зелений */
+         h4{
+             &:first-child{
+                 color: #B9FF66;
+             }
+         }
+   }
+ 
+ 
+ // ------- Секція contact-us ------- 
+ 
+ // Основний контейнер для форми
+ .form-contact-us{
+     padding: 4.3rem 6.25rem;
+     border-radius: 45px;
+     overflow: hidden;
+     position: relative;
+     background: $color-bg-card-w;
+ 
+     // Псевдоелемент для ілюстрації
+     &::after{
+         content: "";
+         position: absolute;
+         background-image: url("./image/happen.png/Illustration.png");
+         top: 50%;
+         right: -27%;
+         width: 50%;
+         height: 630px;
+         transform: translateY(-50%);
+     }
+ }
+ 
+ // Основний блок форми
+ .form{
+     max-width: 556px;
+     width: 100%;
+     overflow: hidden;
+ 
+     // Блок для вибору "Say Hi" або "Get a Quote"
+     .form-us{
+         .input-check-form{
+             width: 28px;
+             height: 28px;
+         }
+ 
+         .label-check-form{
+             gap: 10px;
+             font-size: 1.12em;
+         }
+     }
+ 
+     // Поля форми: ім'я, email, повідомлення
+     .filling-form{
+         display: flex;
+         flex-direction: column;
+         gap: 5px;
+     
+         // Стилі для інпутів і textarea
+         input, textarea{
+             padding: 1.12rem 1.87rem;
+             border-radius: 14px;
+             font-size: 1.12em;
+             outline: none;
+         }
+          
+          // Специфічні стилі для textarea
+         textarea{
+             height: 190px;
+         }
+     }
+ }
+ 
+ // ------- Секція footer -------  
+ 
+ // Стилі для основного футера
+ .footer{
+     padding: 3.12rem 3.75rem;
+     background: $color-bg-card-dark;
+     border-radius: 45px 45px 0 0 ;
+ 
+     // Навігаційні посилання
+     .list-a{
+           
+         .navbar-brand{
+             color: #fff;
+         }
+     }
+     // Лінія
+     .hr{
+         background: $text-color-w;
+     }
+ }
+ 
+ // Блок інформації з контактними даними
+ .information{
+     gap: 20px;
+     
+     h4{
+       color: $text-color;
+       background: $color-bg-tite;
+       font-weight: bold;
+       width: fit-content;
+       padding: 0 7px;
+       border-radius: 7px;
+     }
+      
+     a{
+       font-size: 1.12em;
+       color: $text-color-w;
+     }
+   }
+ 
+ // Кнопка підписки
+  .btn-success{
+     background: $color-bg-tite !important;
+     color: $text-color !important;
+ 
+     &:hover{
+         background: $hover-link !important;
+     }
+ }
+ 
+ // Форма підписки на новини
+ .form-b{
+     background: #292A32;
+     border-radius: 14px;
+     padding: 3.75rem 2.5rem;
+     overflow: hidden;
+ 
+      // Поле вводу для email
+     .input-foot{
+         padding: 1.37rem 2.2rem;
+         background: transparent;
+         outline: none;
+         border-radius: 14px;
+         border: 1px solid #fff;
+         color: $text-color-w;
+         font-size: 1.12em;
+     }
+ }
+ 
+ // Політика приватності внизу футера
+ .footer-prvt-policy{
+     padding-top: 3.12rem;
+     color: $text-color-w;
+ 
+     a{
+         color: $text-color-w;
+         text-decoration: underline;
+     }
+ }
+ 
+ // Соціальні іконки знизу (поки що приховані)
+ .social-bottom{
+     display: none;
+ }
+ 
+ 
+ //  ------- стилі для всіх -------  
+ 
+ // стилі для тіні
+ .card-services, .accordion-item, .cards-team{
+     border: 1px solid !important;
+     box-shadow: 0 5px 0 #000 !important;
+ }
+ 
+ // для наве дення на посилання в header і footer
+ .navbar-brand{
+     color: #000;
+     padding: 15px;
+     font-size: 1.12em;
+     position: relative;
+ 
+     &::after{
+         content: "";
+         position: absolute;
+         width: 100%;
+         height: 1px;
+         background: #9bf72e;
+         bottom: 0;
+         left: 0;
+         transform: scaleX(0);
+         transition: all .25s ease;
+     }
+ 
+     &:hover::after{
+         transform: scaleX(1);
+     }
+ }
+ 
+ // Основні стилі для заголовка 
+ .label-title {
+     gap: 40px;
+ 
+     h2 {
+         background: $color-bg-tite;
+         padding: 0 7px;
+         border-radius: 7px;
+     }
+ 
+     p {
+         max-width: 580px;
+     }
+ }
+ 
